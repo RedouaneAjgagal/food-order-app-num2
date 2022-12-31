@@ -1,0 +1,19 @@
+.ControlAmount {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+.ControlAmount button {
+    background-color: transparent;
+    border: 1px solid #861d1d;
+    border-radius: 0.3rem;
+    color: #861d1d;
+    cursor: pointer;
+    display: flex;
+    padding: 0.4rem 0.9rem;
+    transition: .2s ease-in-out;
+}
+.ControlAmount button:hover {
+    background-color: #861d1d;
+    color: #fff;
+}

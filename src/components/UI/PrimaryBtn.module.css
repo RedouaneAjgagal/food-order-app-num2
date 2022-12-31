@@ -1,0 +1,12 @@
+.PrimaryBtn {
+    background-color: #861d1d;
+    border: none;
+    border-radius: 10rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem 0.4rem;
+    transition: .2s ease-in-out;
+}
+.PrimaryBtn:hover {
+    background-color: #550808;
+}

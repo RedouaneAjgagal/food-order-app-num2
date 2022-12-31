@@ -1,0 +1,13 @@
+.SecondaryBtn {
+    background-color: transparent;
+    border: 1px solid #861d1d;
+    color: #861d1d;
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem 0.4rem;
+    transition: .2s ease-in-out;
+}
+.SecondaryBtn:hover {
+    background-color: #861d1d;
+    color: #fff;
+}

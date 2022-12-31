@@ -1,0 +1,15 @@
+.Item {
+    align-items: center;
+    border-bottom: 1px solid #2222223d;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.Item article {
+    line-height: 1.6;
+}
+.Item article span {
+    color: #861d1d;
+    font-size: 1.3rem;
+    font-weight: 700;
+}

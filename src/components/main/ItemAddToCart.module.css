@@ -1,0 +1,34 @@
+.AddToCartForm {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.AddToCartLabel {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+.AddToCartLabel label {
+    font-weight: 700;
+}
+.AddToCartLabel input {
+    border: 1px solid #86868698;
+    font-size: 1rem;
+    max-width: 3rem;
+    padding: 0.1rem 0.3rem;
+    width: 100%;
+}
+.AddToCartBtn {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    gap: 0.3rem;
+    justify-content: center;
+    max-width: 6rem;
+    width: 100%;
+}
+.AddToCartBtn svg {
+    font-size: .7rem;
+}

@@ -1,0 +1,9 @@
+.Main {
+    margin: auto;
+    max-width: 70rem;
+    padding: 1rem;
+    width: 100%;
+}
+.Main__Wrapper {
+    background-color: #fff;
+}

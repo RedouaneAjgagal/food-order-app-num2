@@ -1,0 +1,9 @@
+.CallToAction {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+.CallToAction button {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}

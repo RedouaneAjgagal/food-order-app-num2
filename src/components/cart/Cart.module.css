@@ -1,0 +1,48 @@
+.Cart {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    max-width: 45rem;
+    padding: 1rem;
+    width: 100%;
+    z-index: 10;
+    animation: slide-in-top .5s ease-out;
+}
+@keyframes slide-in-top {
+    0% {
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+.Close {
+    animation: slide-out-top .3 scubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes slide-out-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+.CartWrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.overlay {
+    background-color: #000000cc;
+    min-height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
