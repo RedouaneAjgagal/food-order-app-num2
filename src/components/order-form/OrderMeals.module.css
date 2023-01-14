@@ -1,3 +1,30 @@
 .OrderMeals {
-    background-color: #acacac;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem 1rem 1rem;
+    border-left: 1px solid #7c7c7c;
+    box-shadow: -.7rem 0 1rem #c2c2c2;
+}
+.OrderMeals ul {
+    display: grid;
+    gap: 2rem;
+}
+.OrderMeals hr {
+    border: none;
+    border-bottom: 1px solid #868686;
+}
+.OrderMeals div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.OrderMeals div h2 {
+    color: #222;
+}
+.OrderMeals div span {
+    color: #861d1d;
+    font-weight: 700;
+    font-size: 1.6rem;
 }

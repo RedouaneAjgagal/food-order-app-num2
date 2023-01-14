@@ -1,0 +1,28 @@
+.OrderList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #383838;
+    border-radius: .2rem;
+}
+.OrderList article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.OrderList article h3 {
+    color: #383838;
+}
+.OrderList article span {
+    background-color: #383838;
+    color: #ededed;
+    padding: .05rem .2rem;
+    height: 100%;
+    border-radius: .2rem;
+}
+.OrderList > span {
+    color: #861d1d;
+    font-size: 1.1rem;
+    font-weight: 700;
+} 

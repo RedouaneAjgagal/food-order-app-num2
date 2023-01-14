@@ -9,9 +9,13 @@ const OrderForm = () => {
     const cvcRef = useRef();
     const checkoutHandler = (e) => {
         e.preventDefault();
-        const validForm = cardNumberRef.current.value.trim() !== '' || cardHolderRef.current.value.trim() !== '' || expiresRef.current.value.trim() !== '' || cvcRef.current.value.trim() !== '';
-        if (!validForm) return;
-        setOrder(true);
+        const validForm = cardNumberRef.current.value.trim() !== '' && cardHolderRef.current.value.trim() !== '' && expiresRef.current.value.trim() !== '' && cvcRef.current.value.trim() !== '';
+        if (!validForm) {
+            console.log(false);
+            return
+        }
+        console.log(true);
+        // setOrder(true);
     }
 
     return (
