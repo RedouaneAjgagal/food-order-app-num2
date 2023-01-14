@@ -15,8 +15,8 @@
     color: #383838;
 }
 .OrderList article span {
-    background-color: #383838;
-    color: #ededed;
+    border: 1px solid #cdcdcd;
+    color: #6c6c6c;
     padding: .05rem .2rem;
     height: 100%;
     border-radius: .2rem;

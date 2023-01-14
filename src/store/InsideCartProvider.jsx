@@ -4,7 +4,8 @@ import InsideCart from "./InsideCart";
 const initialState = {
     items: [],
     itemsAmount: 0,
-    totalAmount: 0
+    totalAmount: 0,
+    order: false
 }
 
 const reducer = (state, action) => {
@@ -42,7 +43,7 @@ const reducer = (state, action) => {
             } else {
                 updatedItems = state.items.map((item) => {
                     if (item.id === action.id) {
-                        return {...item, amount: item.amount - 1}
+                        return { ...item, amount: item.amount - 1 }
                     } else {
                         return item
                     }
@@ -53,6 +54,11 @@ const reducer = (state, action) => {
                 itemsAmount: updatedItemsAmount,
                 totalAmount: totalAmount
             }
+        case 'ORDER_MEALS':
+            if (action.isOrder) {
+                return { ...state, order: true }
+            }
+            return state
         default:
             return state
     }
@@ -66,12 +72,17 @@ const InsideCartProvider = (props) => {
     const removeItemHandler = (id) => {
         dispatchCartAction({ type: 'REMOVE_MEAL', id: id });
     }
+    const orderHandler = (e) => {
+        dispatchCartAction({ type: 'ORDER_MEALS', isOrder: e })
+    }
     const data = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         itemsAmount: cartState.itemsAmount,
         addToCart: addToCartHandler,
-        removeFromCart: removeItemHandler
+        removeFromCart: removeItemHandler,
+        orderMeals: orderHandler,
+        order: cartState.order
     }
     return (
         <InsideCart.Provider value={data}>

@@ -4,6 +4,8 @@ const InsideCart = React.createContext({
     totalAmount: 0,
     itemsAmount: 0,
     addToCart: (() => {}),
-    removeFromCart: (() => {})
+    removeFromCart: (() => {}),
+    orderMeals: (() => {}),
+    order: false
 });
 export default InsideCart;
