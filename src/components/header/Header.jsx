@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import HeaderContent from './HeaderContent';
 import React from 'react';
 const Header = () => {
-    console.log('navbar');
     return (
         <header className={style.Header}>
             <Navbar />

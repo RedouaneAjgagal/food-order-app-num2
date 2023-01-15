@@ -6,6 +6,7 @@ const InsideCart = React.createContext({
     addToCart: (() => {}),
     removeFromCart: (() => {}),
     orderMeals: (() => {}),
-    order: false
+    order: false,
+    resetCart: (() => {})
 });
 export default InsideCart;

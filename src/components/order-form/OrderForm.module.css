@@ -37,7 +37,7 @@
     border: 1px solid #ccc;
     font-size: .9rem;
 }
-button {
+.OrderForm button {
     padding: .75rem;
     cursor: pointer;
     border: none;
@@ -50,6 +50,6 @@ button {
     letter-spacing: .1rem;
     transition: .2s ease-in-out;
 }
-button:hover {
+.OrderForm button:hover {
     background-color: #131313;
 }

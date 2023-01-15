@@ -1,11 +1,11 @@
 .OrderMeals {
-    background-color: #ededed;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 5rem 1rem 1rem;
-    border-left: 1px solid #7c7c7c;
-    box-shadow: -.7rem 0 1rem #c2c2c2;
+    padding: 5rem 1.5rem 1rem;
+    border-left: 1px solid #d1d1d1;
+    box-shadow: -0.7rem 0 1rem #e5e5e5;
 }
 .OrderMeals ul {
     display: grid;

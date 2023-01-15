@@ -1,8 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import style from './OrderForm.module.css';
 import useHttp from '../../hooks/useHttp';
+import OrderProcess from '../../store/OrderProcess';
+import InsideCart from '../../store/InsideCart';
 
 const OrderForm = ({ items, totalAmount }) => {
+    const { orderSubmit } = useContext(OrderProcess);
+    const { resetCart } = useContext(InsideCart);
     const firstNameRef = useRef();
     const lastNameRef = useRef();
     const emailRef = useRef();
@@ -45,6 +49,8 @@ const OrderForm = ({ items, totalAmount }) => {
             body: userData
         }
         postUserInfo(postData);
+        orderSubmit();
+        resetCart();
     }
 
     return (
