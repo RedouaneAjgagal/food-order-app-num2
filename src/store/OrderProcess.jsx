@@ -4,6 +4,6 @@ const OrderProcess = React.createContext({
     order: false,
     orderSubmit: (() => {}),
     thankYou: false,
-    reset: (() => {})
+    backHome: (() => {})
 }) 
 export default OrderProcess;

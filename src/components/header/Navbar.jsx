@@ -8,11 +8,9 @@ const Navbar = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const opneCartHandler = () => {
         setIsCartOpen(true);
-        document.body.style.overflow = 'hidden';
     }
     const closeCartHandler = () => {
         setIsCartOpen(false);
-        document.body.style.overflow = 'visible';
     }
     const [isAnimation, setIsAnimation] = useState(false);
     useEffect(() => {

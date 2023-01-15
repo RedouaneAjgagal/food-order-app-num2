@@ -30,7 +30,7 @@ const OrderProcessProvider = (props) => {
     const orderSubmitHandler = () => {
         dispatchOrder({ type: 'ORDER_SUBMISSION' });
     }
-    const resetHandler = () => {
+    const backHomeHandler = () => {
         dispatchOrder({ type: 'RESET' });
     }
     const data = {
@@ -38,7 +38,7 @@ const OrderProcessProvider = (props) => {
         order: orderState.order,
         orderSubmit: orderSubmitHandler,
         thankYou: orderState.thankYou,
-        reset: resetHandler
+        backHome: backHomeHandler
     }
     return (
         <OrderProcess.Provider value={data}>
