@@ -53,3 +53,6 @@
 .OrderForm button:hover {
     background-color: #131313;
 }
+.OrderForm p {
+    color: #b90000;
+}

@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef, useContext, useState } from 'react'
 import style from './OrderForm.module.css';
 import useHttp from '../../hooks/useHttp';
 import OrderProcess from '../../store/OrderProcess';
@@ -21,6 +21,8 @@ const OrderForm = ({ items, totalAmount }) => {
         return { title: item.title, amount: item.amount }
     })
 
+    const [validForm, setvalidForm] = useState(null);
+
     const checkoutHandler = (e) => {
         e.preventDefault();
         const firstName = firstNameRef.current.value.trim();
@@ -35,7 +37,7 @@ const OrderForm = ({ items, totalAmount }) => {
         const validEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
         const validForm = firstName !== '' && lastName !== '' && address !== '' && country !== '' && state !== '' && zip !== '' && validEmail;
         if (!validForm) {
-            console.log(false);
+            setvalidForm(false);
             return
         }
         const userData = {
@@ -94,6 +96,7 @@ const OrderForm = ({ items, totalAmount }) => {
             </div>
             <button>Checkout</button>
             {error && <h3>{error}</h3>}
+            {validForm === false ? <p>Please Enter Valid Values</p> : null}
         </form>
 
     )
