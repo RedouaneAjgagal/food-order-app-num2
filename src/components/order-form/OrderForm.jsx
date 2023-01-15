@@ -3,6 +3,7 @@ import style from './OrderForm.module.css';
 import useHttp from '../../hooks/useHttp';
 import OrderProcess from '../../store/OrderProcess';
 import InsideCart from '../../store/InsideCart';
+import InputContainer from './InputContainer';
 
 const OrderForm = ({ items, totalAmount }) => {
     const { orderSubmit, backHome } = useContext(OrderProcess);
@@ -61,39 +62,27 @@ const OrderForm = ({ items, totalAmount }) => {
             <form onSubmit={checkoutHandler} noValidate>
                 <h2>Billing Adress</h2>
                 <div className={style.inputsContainerDiv}>
-                    <div>
-                        <label htmlFor="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" ref={firstNameRef} />
-                    </div>
-                    <div>
-                        <label htmlFor="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" ref={lastNameRef} />
-                    </div>
+                    <InputContainer id={'firstName'} label={'First Name'} refInput={firstNameRef} />
+                    <InputContainer id={'lastName'} label={'Last Name'} refInput={lastNameRef} />
                 </div>
                 <div className={style.inputsContainer}>
-                    <label htmlFor="email">Email Address</label>
-                    <input type="email" name="Email Address" id="email" ref={emailRef} />
+                    <InputContainer id={'email'} label={'Email Address'} refInput={emailRef} />
                 </div>
                 <div className={style.inputsContainer}>
-                    <label htmlFor="address">Address</label>
-                    <input type="text" name="Address" id="address" ref={addressRef} maxLength={30} />
+                    <InputContainer id={'address'} label={'Address'} refInput={addressRef} />
                 </div>
                 <div className={style.inputsContainer}>
-                    <label htmlFor="address2">Address 2 (Optional)</label>
-                    <input type="text" name="Address 2" id="address2" ref={addressTwoRef} maxLength={30} />
+                    <InputContainer id={'addressTwo'} label={'Address 2 (Optional)'} refInput={addressTwoRef} />
                 </div>
                 <div className={style.inputsContainerDiv}>
                     <div>
-                        <label htmlFor="country">Country</label>
-                        <input type="text" name="country" id="country" ref={countryRef} />
+                        <InputContainer id={'country'} label={'Country'} refInput={countryRef} />
                     </div>
                     <div>
-                        <label htmlFor="state">State</label>
-                        <input type="text" name="state" id="state" ref={stateRef} />
+                        <InputContainer id={'state'} label={'States'} refInput={stateRef} />
                     </div>
                     <div>
-                        <label htmlFor="zip">Zip</label>
-                        <input type="number" name="zip" id="zip" ref={zipRef} />
+                        <InputContainer id={'zip'} label={'Zip'} refInput={zipRef} />
                     </div>
                 </div>
                 <button className={style.Checkout}>Checkout</button>

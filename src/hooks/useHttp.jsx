@@ -2,13 +2,12 @@ import { useState, useCallback } from 'react'
 
 const useHttp = () => {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     const fetchingData = useCallback(async (req) => {
         setError(null);
         try {
-            setLoading(true);
             const response = await fetch(req.url, {
                 method: req.method ? req.method : 'GET',
                 headers: req.headers ? req.headers : {},

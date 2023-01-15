@@ -21,7 +21,7 @@ const Navbar = () => {
         return () => {
             clearTimeout(timer);
         }
-    }, [ctx.itemsAmount]);
+    }, [ctx.itemsAmount])
     const animationClass = `${isAnimation ? style.bump : ''}`;
     return (
         <nav className={style.Navbar}>

@@ -7,34 +7,6 @@ import useHttp from '../../hooks/useHttp';
 const Products = () => {
     const { items: mealsData, loading, error, fetchingData: fetchingMeals } = useHttp();
 
-
-    // const [mealsData, setMealsData] = useState([]);
-    // const, setIsLoading] = useState(false);
-    // const [error, setError] = useState(null);
-
-
-    // const fetchingMeals = useCallback(async () => {
-    //     setError(null);
-    //     try {
-    //         setIsLoading(true);
-    //         const response = await fetch('https://react-http-ae2f9-default-rtdb.europe-west1.firebasedatabase.app/meals.json');
-    //         if (!response.ok) {
-    //             throw new Error("Couldn't fetch meals!");
-    //         }
-    //         const mealsData = await response.json();
-    //         const mealItems = []
-    //         for (const key in mealsData) {
-    //             mealItems.push({ ...mealsData[key], id: key });
-    //         }
-    //         setMealsData(mealItems);
-    //     } catch (error) {
-    //         setError(error.message);
-    //     }
-    //     setIsLoading(false);
-    // }, []);
-
-
-
     useEffect(() => {
         const getData = {
             url: 'https://react-http-ae2f9-default-rtdb.europe-west1.firebasedatabase.app/meals.json',
