@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
 import style from './OrderMeals.module.css';
 import OrderList from './OrderList';
-import InsideCart from '../../store/InsideCart';
 
-const OrderMeals = () => {
-  const { items, totalAmount } = useContext(InsideCart);
+
+const OrderMeals = ({ items, totalAmount }) => {
   const showMeals = items.map((meal) => <OrderList key={meal.id} value={meal} />)
   const totalPrice = `$${totalAmount.toFixed(2)}`
   return (

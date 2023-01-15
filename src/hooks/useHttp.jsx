@@ -5,24 +5,26 @@ const useHttp = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const fetchingData = useCallback(async (args) => {
+    const fetchingData = useCallback(async (req) => {
         setError(null);
         try {
             setLoading(true);
-            const response = await fetch(args.url, {
-                method: args.method ? args.method : 'GET',
-                headers: args.headers ? args.headers : {},
-                body : args.body ? JSON.stringify(args.body) : null
+            const response = await fetch(req.url, {
+                method: req.method ? req.method : 'GET',
+                headers: req.headers ? req.headers : {},
+                body: req.body ? JSON.stringify(req.body) : null
             });
             if (!response.ok) {
-                throw new Error(args.errorMsg);
+                throw new Error(req.errorMsg);
             }
             const mealsData = await response.json();
-            const mealItems = []
-            for (const key in mealsData) {
-                mealItems.push({ ...mealsData[key], id: key });
+            if (req.method !== 'POST') {
+                const mealItems = []
+                for (const key in mealsData) {
+                    mealItems.push({ ...mealsData[key], id: key });
+                }
+                setItems(mealItems);
             }
-            setItems(mealItems);
         } catch (error) {
             setError(error.message);
         }

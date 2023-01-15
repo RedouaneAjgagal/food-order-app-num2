@@ -1,12 +1,11 @@
 import style from './Products.module.css';
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Item from './Item';
 import useHttp from '../../hooks/useHttp';
 
 
 const Products = () => {
-
-    const {items: mealsData, loading, error, fetchingData: fetchingMeals} = useHttp();
+    const { items: mealsData, loading, error, fetchingData: fetchingMeals } = useHttp();
 
 
     // const [mealsData, setMealsData] = useState([]);
@@ -33,6 +32,9 @@ const Products = () => {
     //     }
     //     setIsLoading(false);
     // }, []);
+
+
+
     useEffect(() => {
         const getData = {
             url: 'https://react-http-ae2f9-default-rtdb.europe-west1.firebasedatabase.app/meals.json',
