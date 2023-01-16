@@ -8,3 +8,5 @@
  ## Original App
  - Source: [GitHub Repo](https://github.com/RedouaneAjgagal/food-order-app-num2)
  - live: [Live Site](https://cheerful-conkies-18c65c.netlify.app/)
+ 
+ `Important note:` Order Submition goes to a database(firebase) but here in this demo database is `Read Only` so cant send any `POST` to the database. Make sure to use your own database with Auth if you want use the source code.
